@@ -1,6 +1,6 @@
 body, html {
-  /*height: 100%;
-  overflow: hidden*/
+  height: 100%;
+  overflow: hidden
 }
 
 body, html, h1, h2, h3, h4, h5, h6, li, p, ul {
@@ -103,6 +103,7 @@ img {
   left: 0;*/
   width: 100%;
   height: 100%;
+  /*height: 531px;*/
 }
 
 #wrap .content .contentList .firstLi{
@@ -159,6 +160,7 @@ img {
   margin-top: 20px;
   position: absolute;
   left: 10px;
+  z-index: 1;
 }
 #wrap .content .contentList .secondLi .second .left .photoList{
   width:100%;
@@ -241,6 +243,7 @@ img {
   margin-top: 20px;
   position: absolute;
   left: 10px;
+  z-index: 1;
 }
 #wrap .content .contentList .thirdLi .third .left .photoList{
   width:100%;
