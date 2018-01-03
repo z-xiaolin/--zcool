@@ -12,9 +12,9 @@ let $firstLi = $contentList.find('.firstLi>.first')
 let $firstLiImg = $firstLi.children("img")[0]
 
 let $secondLis = $contentList.find('.secondLi .left ul li')
-let $secondLi1 = $secondLis[0]
-let $secondLi2 = $secondLis[1]
-let $secondLi3 = $secondLis[2]
+let $secondLi1 = $($secondLis[0])
+let $secondLi2 = $($secondLis[1])
+let $secondLi3 = $($secondLis[2])
 let $secondRight = $contentList.find('.secondLi .right')
 
 let $thirdLis = $contentList.find('.thirdLi .left ul li')
@@ -73,10 +73,10 @@ function cssanimations(index) {
     $firstLi.animate({opacity:1}, 1200)
   }
   // second Li
-  $secondLi1.css({transform:"translateY(500px)"}, 800)
-  $secondLi2.css({transform:"translateY(500px)"}, 800)
-  $secondLi3.css({transform:"translateY(500px)"}, 800)
-  $secondRight.css({transform:"translateY(-500px)"}, 1200)
+  $secondLi1.css({"transform":"translateY(500px)"})
+  $secondLi2.css({transform:"translateY(500px)"})
+  $secondLi3.css({transform:"translateY(500px)"})
+  $secondRight.css({transform:"translateY(-500px)"})
   if (index == 1){
     $secondLi1.css({transform:"translateY(0px)"}, 800)
     $secondLi2.css({transform:"translateY(0px)"}, 800)
