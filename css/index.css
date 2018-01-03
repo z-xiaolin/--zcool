@@ -1,0 +1,291 @@
+body, html {
+  /*height: 100%;
+  overflow: hidden*/
+}
+
+body, html, h1, h2, h3, h4, h5, h6, li, p, ul {
+  margin: 0;
+  padding: 0;
+  font: 14px "微软雅黑"
+}
+
+a {
+  text-decoration: none;
+  display: block
+}
+
+li {
+  list-style: none
+}
+
+img {
+  display: block
+}
+
+
+#wrap .header{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 60px;
+  width:100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+
+#wrap .header .headerContent {
+  height: 100%;
+  width: 980px;
+  margin: 0 auto;
+}
+#wrap .header .headerContent .logo{
+  margin: 16px 20px 0 0;
+  float: left;
+}
+
+#wrap .header .headerContent nav {
+  float: right;
+}
+
+#wrap .header .headerContent nav ul li{
+  float: left;
+  width: 90px;
+  line-height: 60px;
+  text-align: center;
+}
+#wrap .header .headerContent nav ul li:hover {
+  background: #fc0
+}
+
+#wrap .header .headerContent nav ul li:hover a {
+  color: #000
+}
+
+#wrap .header .headerContent nav ul li.active {
+  background: #fc0
+}
+
+#wrap .header .headerContent nav ul li.active a {
+  color: #000
+}
+
+#wrap .header .headerContent nav ul li a{
+  color: #fff;
+}
+
+#wrap .content{
+  width: 100%;
+  position: relative;
+  top: 60px;
+  overflow: hidden;
+}
+#wrap .content .sideNav{
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  z-index: 1;
+}
+#wrap .content .sideNav li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+#wrap .content .sideNav li.active{
+  background: #000;
+}
+/* 图片列表 */
+#wrap .content .contentList{
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+  width: 100%;
+  height: 100%;
+}
+
+#wrap .content .contentList .firstLi{
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-image: url("../img/s1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+#wrap .content .contentList .firstLi .first {
+  width: 980px;
+  height: 578px;
+  position: absolute;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;
+  margin: auto;
+  z-index: 5;
+}
+#wrap .content .contentList .firstLi .first img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -545px;
+  margin-top: -260px;
+}
+
+#wrap .content .contentList .secondLi{
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-image: url("../img/s2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+#wrap .content .contentList .secondLi .second{
+  width: 980px;
+  height: 578px;
+  /*position: absolute;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;*/
+  margin: 0 auto;
+}
+#wrap .content .contentList .secondLi .second .left{
+  width: 837px;
+  height: 437px;
+  margin-top: 20px;
+  position: absolute;
+  left: 10px;
+}
+#wrap .content .contentList .secondLi .second .left .photoList{
+  width:100%;
+  height:100%;
+}
+#wrap .content .contentList .secondLi .second .left .photoList li{
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+}
+#wrap .content .contentList .secondLi .second .left .photoList li p{
+  margin: 20px 0;
+  font-size: 18px;
+}
+#wrap .content .contentList .secondLi .second .left .photoList li a {
+  margin-left: 80px;
+  background: #fc0;
+  width: 98px;
+  height: 30px;
+  background: url(../img/buy.jpg) no-repeat;
+  background-position: 50% 50%
+}
+
+#wrap .content .contentList .secondLi .second .right{
+  position: absolute;
+  right: 2px;
+  margin-top: 25px;
+  padding-right: 15px;
+  border-right: 2px solid;
+}
+#wrap .content .contentList .secondLi .second .right h1{
+  font-size: 34px;
+  color: #333;
+  font-weight: 100;
+  text-align: right;
+}
+#wrap .content .contentList .secondLi .second .right p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: right;
+}
+#wrap .content .contentList .secondLi .second .right a{
+  color: #333;
+  text-align: right;
+}
+#wrap .content .contentList .secondLi .second .bg{
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  bottom: 0;
+}
+
+#wrap .content .contentList .thirdLi{
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-image: url("../img/s2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+#wrap .content .contentList .thirdLi .third{
+  width: 980px;
+  height: 578px;
+  /*position: absolute;
+  top: 0;
+  left:0;
+  bottom:0;
+  right:0;*/
+  margin: 0 auto;
+}
+#wrap .content .contentList .thirdLi .third .left{
+  width: 837px;
+  height: 437px;
+  margin-top: 20px;
+  position: absolute;
+  left: 10px;
+}
+#wrap .content .contentList .thirdLi .third .left .photoList{
+  width:100%;
+  height:100%;
+}
+#wrap .content .contentList .thirdLi .third .left .photoList li{
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+}
+#wrap .content .contentList .thirdLi .third .left .photoList li p{
+  margin: 20px 0;
+  font-size: 18px;
+}
+#wrap .content .contentList .thirdLi .third .left .photoList li a {
+  margin-left: 80px;
+  background: #fc0;
+  width: 98px;
+  height: 30px;
+  background: url(../img/buy.jpg) no-repeat;
+  background-position: 50% 50%
+}
+
+#wrap .content .contentList .thirdLi .third .right{
+  position: absolute;
+  right: 2px;
+  margin-top: 25px;
+  padding-right: 15px;
+  border-right: 2px solid;
+}
+#wrap .content .contentList .thirdLi .third .right h1{
+  font-size: 34px;
+  color: #333;
+  font-weight: 100;
+  text-align: right;
+}
+#wrap .content .contentList .thirdLi .third .right p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: right;
+}
+#wrap .content .contentList .thirdLi .third .right a{
+  color: #333;
+  text-align: right;
+}
+#wrap .content .contentList .thirdLi .third .bg{
+  position: absolute;
+  top: -30px;
+  right: -68px;
+  bottom: 0;
+}
