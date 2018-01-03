@@ -75,6 +75,7 @@ img {
 
 #wrap .content{
   width: 100%;
+  /*height: 506px;*/
   position: relative;
   top: 60px;
   overflow: hidden;
@@ -83,7 +84,7 @@ img {
   position: fixed;
   top: 50%;
   right: 1%;
-  z-index: 1;
+  z-index: 5;
 }
 #wrap .content .sideNav li {
   width: 10px;
@@ -106,7 +107,7 @@ img {
 
 #wrap .content .contentList .firstLi{
   position: relative;
-  top: -25px;
+  /*top: -25px;*/
   width: 100%;
   height: 578px;
   background-image: url("../img/s1.jpg");
@@ -118,12 +119,12 @@ img {
   width: 980px;
   height: 578px;
   position: absolute;
-  top: 55px;
+  /*top: 55px;*/
   left:-100px;
   bottom:0;
   right:0;
   margin: auto;
-  z-index: 5;
+  z-index: 3;
 }
 #wrap .content .contentList .firstLi .first img{
   /*position: absolute;
@@ -155,7 +156,7 @@ img {
 #wrap .content .contentList .secondLi .second .left{
   width: 837px;
   height: 437px;
-  /*margin-top: 20px;*/
+  margin-top: 20px;
   position: absolute;
   left: 10px;
 }
