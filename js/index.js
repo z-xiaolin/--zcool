@@ -45,7 +45,7 @@ $headerLis.each((index, item) =>{
     /* 内容区显示 */
     $("#wrap .content").animate({top: (-$contentLiHeight * index + $contentTop) + "px" }, 1000)
     /* 内容区的动画效果 */
-    cssanimations(index)
+    // cssanimations(index)
 
     /* 小圆点的变化 */
     $("#wrap .content .sideNav li[class]").removeAttr("class")
@@ -66,7 +66,50 @@ $sideNavLis.each((index, item) => {
   })
 })
 
-function cssanimations(index) {
+/* 滚轮事件 */
+var currentIndex = 0
+var preIndex = 0
+let timer
+$(document).on("mousewheel DOMMouseScroll", function (e) {
+  var delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||  // chrome & ie
+    (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));              // firefox
+
+  clearTimeout(timer)
+  timer = setTimeout(()=>{
+    if (delta > 0) {
+      // 向上滚
+      console.log("wheelup");
+      if (currentIndex > 0) {
+        currentIndex--
+      }
+      move(currentIndex)
+    } else if (delta < 0) {
+      // 向下滚
+      console.log("wheeldown");
+      if (currentIndex < $contentList.children('li').length - 1){
+        currentIndex++
+        if ((currentIndex == 0 && delta < 0) || (currentIndex == $contentList.children('li').length && delta < 0)) {
+          return
+        }
+        move(currentIndex)
+      }
+      preIndex = currentIndex
+    }
+  }, 200)
+  window.event ? (window.event.returnValue = false) : e.preventDefault()
+});
+
+function move(index) {
+  $headerLis.attr("class","")
+  $headerLis.eq(index).addClass("active")
+
+  $sideNavLis.attr("class", "")
+  $sideNavLis.eq(index).addClass("active")
+
+  $("#wrap .content").animate({top: (-$contentLiHeight * index + $contentTop) + "px" }, 1000)
+}
+
+/*function cssanimations(index) {
   // firstLi
   $firstLi.css({opacity:0}, 1000)
   if (index == 0){
@@ -84,7 +127,7 @@ function cssanimations(index) {
     $secondRight.css({transform:"translateY(0px)"}, 1200)
   }
 
-}
+}*/
 
 /* 动画列表 */
 /*let arr = [

@@ -22,6 +22,28 @@ img {
   display: block
 }
 
+@keyframes  move1{
+  0% {transform: translate(330px, -1000px)}
+  20% {transform: translate(330px, 0px)}
+  40% {transform: translate(330px, -50px)}
+  60% {transform: translate(330px, 0)}
+  100% {transform: translate(0, 0)}
+}
+@keyframes move2 {
+  0% {transform: translate(0px, -1000px)}
+  20% {transform: translate(0px, 0px)}
+  40% {transform: translate(0px, -50px)}
+  60% {transform: translate(0px, 0)}
+  100% {transform: translate(0, 0)}
+}
+@keyframes move3 {
+  0% {transform: translate(-330px, -1000px)}
+  20% {transform: translate(-330px, 0px)}
+  40% {transform: translate(-330px, -50px)}
+  60% {transform: translate(-330px, 0)}
+  100% {transform: translate(0, 0)}
+}
+
 
 #wrap .header{
   position: fixed;
