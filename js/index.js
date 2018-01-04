@@ -41,11 +41,15 @@ $headerLis.each((index, item) =>{
     /* 导航区的变化 */
     $('#wrap .header .headerContent nav ul li[class]').removeAttr("class")
     $(item).attr("class", "active")
+    // move(index)
 
     /* 内容区显示 */
-    $("#wrap .content").animate({top: (-$contentLiHeight * index + $contentTop) + "px" }, 1000)
+      $("#wrap .content").animate({top: (-$contentLiHeight * index + $contentTop) + "px" }, 1000)
+   /* 滚轮 */
+    currentIndex = index
+    // move(currentIndex)
     /* 内容区的动画效果 */
-    // cssanimations(index)
+
 
     /* 小圆点的变化 */
     $("#wrap .content .sideNav li[class]").removeAttr("class")
